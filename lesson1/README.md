@@ -34,8 +34,8 @@ alert(a === b);      // false?
 ```
 
 ## 變數宣告
-    * 不得宣告為保留字 (JavaScript 內建的文法)：
-        * [JavaScript 中的保留字一覽表](https://hiskio.com/courses/51/lectures/881)
+* 不得宣告為保留字 (JavaScript 內建的文法)：
+    * [JavaScript 中的保留字一覽表](https://hiskio.com/courses/51/lectures/881)
 
 ## 變數型態
 * Number 數值
