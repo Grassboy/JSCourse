@@ -41,18 +41,107 @@ alert(a === b);      // false?
 * Number 數值
 * String 字串
 * Boolean 布林值 true/false
+* function 函數
+    * `alert( ... )` `prompt( ... )`
 * Object 物件
+    * 物件建構 `new XXX();`
+        * 陣列 `new Array();`
+            * 簡化寫法 `[]`
+        * 基本物件 `new Object();`
+            * 簡化寫法 `{}`
+        * Date `new Date`
+        * ：
+        * ：
+    * 常用物件練習
+        * Date
+        * Math (為什麼不用 new?)
 
 ## 運算子
-* 指定運算子 `=`
-* 邏輯運算子 `==` `&&` `||` `!` `===` (嚴格比較)
 * 算數運算子 `+` `-` `*` `/` `%` (取餘數)
-* 位元運算子 `&` `|` `^`
+* 位元運算子 `&` `|` `^` `~` `<<` `>>`
+* 邏輯運算子 `>` `<` `>=` `<=` `&&` `||` `!` `==` `!=` `===` `!==` (嚴格比較)
+* 賦值運算子 `=` `+=` `-=` `*=` `/=` `%=` ...
+
+## 練習
+* 輸入攝氏度數(℃) 輸出華氏度數(℉)
+
 
 ## 物件宣告
+```javascript
+
+//宣告陣列
+var array = new Array(3);
+array[0] = 'hello';
+array[1] = 'world';
+array[2] = '!!!';
+
+//簡易寫法
+var array = ['hello', 'word', '!!!'];
+
+//宣告物件
+var grassboy = new Object();
+grassboy.age = 34;
+grassboy.last_name = 'Wu';
+
+//簡易寫法
+var grassboy = {
+    age: 34,
+    last_name = 'Wu'
+};
+
+```
+
 
 ## Assign Reference / Assign Value
+```javascript
+var a_value = 123;
+var b_value = a_value;
+b_value *= 2;
+alert(a_value); //  ??? 
 
+var a_object = {
+    value: 123
+};
+var b_object = a_object;
+b_object.value *= 2;
+alert(b_object.value); // ???
+```
+## 函數
+* 目的：重複使用某段操作
+* 零至多個參數，一個回傳值
+    * 如何進行多個輸出？
+### 函數宣告
+
+```javascript
+//無參數/無回傳值
+var helloworld = function() {
+    alert('Helloworld');
+};
+
+//另一種寫法
+function helloworld(){
+    alert('Helloworld');
+}
+
+//有參數
+var greeting = function(name) {
+    alert('hello!!' + name);
+}
+
+//有參數/有回傳值
+var sum = function(a, b){
+    return a + b;
+};
+
+```
+
+## Prototype Function
+* 字串函數
+    * `String.prototype.toLowerCase()`: 轉小寫
+    * `String.prototype.toUpperCase()`: 轉大寫
+    * `String.prototype.substr(start, length)`: 取字串的子字串
+* 數值函數
+    * `Number.prototype.toFixed(pos)`: 四捨五入
 
 ## 認識 consle：網頁的 Command Line 介面
 * 在瀏覽器按下 `[F12]` 鍵，找到 console (主控台) 介面
@@ -75,7 +164,10 @@ alert(a === b);      // false?
 
 
 # 上一課：[Lesson 0：概論](../lesson0/README.md)
+# 下一課：[Lesson 2：流程控制](../lesson2/README.md)
 
 ## 待教：
+* 函數宣告
 * trusy / falsy
+* instanceof / 物件導向
 * 程式流程控制 if / swich / for / while
