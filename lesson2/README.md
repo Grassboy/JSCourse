@@ -1,5 +1,17 @@
 # Lesson 2：流程控制
 
+```javascript
+var service = function(user_name){
+    var food=['hamburger','coke','tomato'];
+    var input = prompt(user_name + '你要吃什麼 1.hamburger 2.coke  3.tomato');
+    console.log(user_name,'選了',food[input-1]);    
+    alert(user_name + '要吃'+ food[input-1]);
+};   
+
+service('Tom');
+service('Amber');
+service('Slivia');
+```
 ## 條件判斷
 ### if
 ### switch
