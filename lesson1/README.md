@@ -119,8 +119,10 @@ alert(b_object.value); // ???
 ```
 ## 函數
 * 目的：重複使用某段操作
+* 函數呼叫：`[函數名稱]([參數1], [參數2], ...)`
 * 零至多個參數，一個回傳值
     * 如何進行多個輸出？
+
 ### 函數宣告
 
 ```javascript
@@ -144,15 +146,31 @@ var sum = function(a, b){
     return a + b;
 };
 
-```
+### 練習
+* 攝式轉華氏函數化
 
-## Prototype Function
-* 字串函數
+```
+## JavaScript 內建函數物件
+* 型別轉換
+    * `parseInt(string, [進位])`: 字串轉整數(可以指定進位)
+    * `parseFloat(string)`: 字串轉數值
+* Math: 數學相關函數
+    * `Math.random()`: 取出 0~1 之間的亂數
+    * `Math.floor(num)`: 取出比 num 小的最大整數
+    * `Math.ceil(num)`: 取出比 num 小的最大整數
+
+## Prototype Function 樣板函數
+* 定義:
+    * 變數本身依據其所屬的變數類別，所具備的函數
+    * 使用方法：`[變數].[函數名稱]`
+* 字串相關
     * `String.prototype.toLowerCase()`: 轉小寫
     * `String.prototype.toUpperCase()`: 轉大寫
     * `String.prototype.substr(start, length)`: 取字串的子字串
-* 數值函數
+* 數值相關
     * `Number.prototype.toFixed(pos)`: 四捨五入
+* 陣列相關
+    * `Array.prototype.push(item)`: 將元素加入陣列
 
 ## 認識 consle：網頁的 Command Line 介面
 * 在瀏覽器按下 `[F12]` 鍵，找到 console (主控台) 介面
@@ -177,7 +195,4 @@ var sum = function(a, b){
 # 上一課：[Lesson 0：概論](../lesson0/README.md)
 # 下一課：[Lesson 2：流程控制](../lesson2/README.md)
 
-## 待教：
-* 函數宣告
-* instanceof / 物件導向
-* 程式流程控制 if / swich / for / while
+
