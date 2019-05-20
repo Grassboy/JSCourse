@@ -122,6 +122,34 @@ var b_object = a_object;
 b_object.value *= 2;
 alert(b_object.value); // ???
 ```
+
+```javascript
+
+//復習： 為什麼以下有些 b 會影響到 a ，有些不會？
+//tips: 基礎變數、物件變數
+var a_value = 123;
+var b_value = a_value;
+b_value *= 2;  
+alert(b_value + ' ' + a_value);
+
+var a_object = {
+    value: 123
+};
+var b_object = a_object;
+b_object.value *= 2;
+alert(b_object.value + ' ' + a_object.value);
+
+var a = [123, 234, 345];
+var b = a;
+b[0] *= 2;
+alert(b[0] + ' ' + a[0]);
+
+var a = true;
+var b = a;
+b = !b;
+alert(b + ' ' + a);
+```
+
 ## 函數
 * 目的：重複使用某段操作
 * 函數呼叫：`[函數名稱]([參數1], [參數2], ...)`
@@ -162,7 +190,7 @@ var sum = function(a, b){
 * Math: 數學相關函數
     * `Math.random()`: 取出 0~1 之間的亂數
     * `Math.floor(num)`: 取出比 num 小的最大整數
-    * `Math.ceil(num)`: 取出比 num 小的最大整數
+    * `Math.ceil(num)`: 取出比 num 大的最小整數
 
 ## Prototype Function 樣板函數
 * 定義:
