@@ -70,6 +70,8 @@ if(input == 1) {
     //do something for 4
 } else if(input == 5) {
     //do something for 5
+} else {
+    //default action
 }
 
 //better
@@ -89,6 +91,8 @@ case 4:
 case 5:
     //do something for 5
     break;
+default:
+    //default
 }
 ```
 * case value 採嚴格比較
@@ -165,6 +169,9 @@ for(var i = 1; i <= 9; i++){
 #### 迴圈控制 continue / break
 * continue：不跳出迴圈，但直接跳到迴圈的下一次[判斷條件]區塊
     * 九九乘法表，通常省略 1 * 1 、 1 * 2 、1 * 3 、 ...
+#### 0621 作業
+* 把 1~100 中，11 的倍數 alert 出來
+* 寫一個函數 `var findNum = function(n, a){}` 把 1 ~ n 中，a 的倍數都 alert 出來
 #### 練習：
 * 星期一猴子穿新衣，星期二猴子肚子餓 ... `monkey.js`
 * 終極密碼 1~100 `boom.js`

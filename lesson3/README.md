@@ -1,5 +1,7 @@
 # JavaScript 下常用的函數
 ## Global Function
+* `alert(str)`: 將 str 以對話方塊的方式顯示
+* `prompt(str)`: 顯示 str 訊息，並讓用戶輸入一串文字，並回傳該文字
 * `parseInt(str, [n])`: 將 str 轉成整數，n 表示 str 為 n 進位的字串，通常為 10 (有時會有例外)
 * `parseFloat(str)`: 將 str 轉成數值型態(可以有小數點)
 ## Number.prototype [Number - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)
